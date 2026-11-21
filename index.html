@@ -9,16 +9,14 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap');
 :root{
- --bg:#08051c;--panel:rgba(19,12,52,.88);
- --purple:#a42cff;--blue:#16d9ff;--gold:#ffd34e;
- --text:#f5efff;--muted:#b8acd9;
+ --bg:#08051c;--panel:rgba(19,12,52,.88);--purple:#a42cff;
+ --blue:#16d9ff;--gold:#ffd34e;--text:#f5efff;--muted:#b8acd9;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{
  background:radial-gradient(ellipse at 50% 35%,#35116b 0%,transparent 45%),
  radial-gradient(ellipse at 10% 85%,#24105c 0%,transparent 40%),#08051c;
- color:var(--text);font-family:'Rajdhani',sans-serif;
- min-height:100vh;overflow-x:hidden;
+ color:var(--text);font-family:'Rajdhani',sans-serif;min-height:100vh;overflow-x:hidden;
 }
 body:before{
  content:"";position:fixed;inset:0;pointer-events:none;opacity:.45;
@@ -32,8 +30,8 @@ body:before{
 header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
 .brand{display:flex;align-items:center;gap:12px}
 .logo{
- width:57px;height:57px;border:2px solid var(--gold);
- transform:rotate(45deg);border-radius:13px;display:grid;place-items:center;
+ width:57px;height:57px;border:2px solid var(--gold);transform:rotate(45deg);
+ border-radius:13px;display:grid;place-items:center;
  box-shadow:0 0 18px #ffbd37,inset 0 0 15px #ffbd3766;
 }
 .logo span{transform:rotate(-45deg);color:var(--gold);font:bold 38px Orbitron;text-shadow:0 0 15px var(--gold)}
@@ -48,20 +46,14 @@ header{display:flex;align-items:center;justify-content:space-between;margin-bott
 }
 .profile-row{display:flex;align-items:center;gap:13px;padding:15px;margin-bottom:13px}
 .avatar{
- width:75px;height:75px;flex-shrink:0;border-radius:50%;
- display:grid;place-items:center;font-size:38px;
+ width:75px;height:75px;flex-shrink:0;border-radius:50%;display:grid;place-items:center;font-size:38px;
  background:radial-gradient(circle,#a84cff,#190a42 65%);
  border:2px solid #d39aff;box-shadow:0 0 20px #a42cff;
 }
-.level{flex:1}
-.level strong{color:var(--gold);font-size:22px}
+.level{flex:1}.level strong{color:var(--gold);font-size:22px}
 .level p{color:#d8c9ff;font-size:16px}
 .progress{height:10px;background:#302047;border-radius:20px;margin-top:8px;overflow:hidden}
-.progress span{
- display:block;width:68%;height:100%;
- background:linear-gradient(90deg,#ffbd28,#fff17a);
- border-radius:20px;box-shadow:0 0 12px var(--gold);
-}
+.progress span{display:block;width:68%;height:100%;background:linear-gradient(90deg,#ffbd28,#fff17a);border-radius:20px;box-shadow:0 0 12px var(--gold)}
 .percent{font-size:14px;color:white;margin-top:4px}
 .balance{padding:16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}
 .crystal{font-size:43px;color:#c69aff;text-shadow:0 0 18px #a42cff}
@@ -77,8 +69,8 @@ header{display:flex;align-items:center;justify-content:space-between;margin-bott
  linear-gradient(160deg,#10082d,#170b42 55%,#08051c);
 }
 .hero:after{
- content:"";position:absolute;right:-95px;top:60px;width:290px;height:290px;
- border-radius:50%;background:radial-gradient(circle at 35% 35%,#d8aaff,#5420b4 40%,#09051c 72%);
+ content:"";position:absolute;right:-95px;top:60px;width:290px;height:290px;border-radius:50%;
+ background:radial-gradient(circle at 35% 35%,#d8aaff,#5420b4 40%,#09051c 72%);
  box-shadow:0 0 55px #9b35ff;opacity:.8;
 }
 .hero-content{position:relative;z-index:2;width:65%}
@@ -92,33 +84,23 @@ header{display:flex;align-items:center;justify-content:space-between;margin-bott
  clip-path:polygon(50% 0,68% 25%,75% 100%,25% 100%,32% 25%);
  border:2px solid #d7a3ff;filter:drop-shadow(0 0 12px #ad37ff);
 }
-.tower-body:before{
- content:"";position:absolute;left:45%;top:10%;height:88%;width:10%;
- background:#16dfff;box-shadow:0 0 15px #16dfff,0 0 35px #b02cff;
-}
-.tower-body:after{
- content:"Z";position:absolute;top:43%;left:27%;
- font:900 42px Orbitron;color:var(--gold);text-shadow:0 0 20px #ffbc28;
-}
+.tower-body:before{content:"";position:absolute;left:45%;top:10%;height:88%;width:10%;background:#16dfff;box-shadow:0 0 15px #16dfff,0 0 35px #b02cff}
+.tower-body:after{content:"Z";position:absolute;top:43%;left:27%;font:900 42px Orbitron;color:var(--gold);text-shadow:0 0 20px #ffbc28}
 .orbit{position:absolute;top:43%;left:-35%;width:170%;height:60px;border:3px solid #d04cff;border-radius:50%;transform:rotate(-15deg);box-shadow:0 0 15px #d04cff}
 .cta{
  display:inline-block;margin-top:25px;padding:13px 22px;border-radius:35px;
  background:linear-gradient(100deg,#ffcf3d,#fff08c);color:#180b2d;
- font-weight:900;font-size:18px;border:2px solid #fff1a4;
- box-shadow:0 0 22px #ffbd37;cursor:pointer;
+ font-weight:900;font-size:18px;border:2px solid #fff1a4;box-shadow:0 0 22px #ffbd37;cursor:pointer;
 }
 .stats{display:grid;grid-template-columns:repeat(3,1fr);padding:15px 5px;margin-bottom:17px}
 .stat{text-align:center;padding:5px;border-right:1px solid #6944a5}
-.stat:last-child{border:0}
-.stat .icon{font-size:27px}
+.stat:last-child{border:0}.stat .icon{font-size:27px}
 .stat small{display:block;color:#c6b7e8;font-size:13px}
-.stat strong{font-size:20px}
-.stat em{display:block;color:#20e8a1;font-style:normal}
+.stat strong{font-size:20px}.stat em{display:block;color:#20e8a1;font-style:normal}
 .section-title{font:700 18px Orbitron;margin:22px 2px 12px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
 .tile{min-height:130px;padding:13px 5px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:8px;cursor:pointer;transition:.2s}
-.tile:active{transform:scale(.96)}
-.tile .emoji{font-size:37px;filter:drop-shadow(0 0 9px #a94cff)}
+.tile:active{transform:scale(.96)}.tile .emoji{font-size:37px;filter:drop-shadow(0 0 9px #a94cff)}
 .tile strong{font-size:16px;line-height:1.1}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
 .reward,.activity{padding:15px;min-width:0}
@@ -126,9 +108,8 @@ header{display:flex;align-items:center;justify-content:space-between;margin-bott
 .gift{font-size:55px;text-align:center}
 .reward p{text-align:center;color:var(--gold);font-size:18px}
 .claim{
- width:100%;margin-top:12px;padding:10px;border:1px solid #ffe17b;
- border-radius:25px;background:linear-gradient(90deg,#ffc52e,#ffeb86);
- color:#160a2b;font-weight:900;font-size:16px;cursor:pointer;
+ width:100%;margin-top:12px;padding:10px;border:1px solid #ffe17b;border-radius:25px;
+ background:linear-gradient(90deg,#ffc52e,#ffeb86);color:#160a2b;font-weight:900;font-size:16px;cursor:pointer;
 }
 .activity-item{font-size:13px;padding:8px 0;border-bottom:1px solid #ffffff18;color:#d7caff}
 .activity-item b{color:var(--gold);display:block}
@@ -138,23 +119,19 @@ header{display:flex;align-items:center;justify-content:space-between;margin-bott
  border:1px solid #8e3bff;border-bottom:0;border-radius:22px 22px 0 0;
  display:flex;justify-content:space-around;box-shadow:0 0 25px #8d2cff66;z-index:10;
 }
-.nav-item{background:none;border:0;color:#bcb0e7;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:12px;min-width:48px;cursor:pointer}
+.nav-item{background:none;border:0;color:#bcb0e7;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:12px;min-width:48px}
 .nav-item span{font-size:24px}
 .nav-item.active{color:var(--gold);text-shadow:0 0 12px var(--gold)}
 .nav-item.center span{font:900 29px Orbitron;color:var(--gold);border:2px solid #c75cff;border-radius:14px;padding:5px 13px;box-shadow:0 0 17px #a42cff}
-.page{display:none}
-.page.active{display:block}
+.page{display:none}.page.active{display:block}
 .page-panel{padding:18px;margin-bottom:13px}
 .page-panel h2{font:700 21px Orbitron;margin-bottom:12px}
 .mission{padding:15px;margin:12px 0;display:flex;align-items:center;gap:12px}
-.mission .emoji{font-size:30px}
-.mission div{flex:1}
-.mission p{color:var(--muted);font-size:14px}
-.mission button{border:1px solid var(--gold);background:#38254f;color:var(--gold);padding:8px 12px;border-radius:15px;cursor:pointer}
+.mission .emoji{font-size:30px}.mission div{flex:1}.mission p{color:var(--muted);font-size:14px}
+.mission button{border:1px solid var(--gold);background:#38254f;color:var(--gold);padding:8px 12px;border-radius:15px}
 .notice{padding:10px;color:#c9b6ed;font-size:13px;text-align:center}
 #telegramStatus{padding:10px;border-radius:12px;margin-top:12px;background:#171035;color:#ffd66b;font-size:14px;overflow-wrap:anywhere}
 button{font-family:inherit}
-@media(max-width:360px){.hero-content{width:75%}.hero h2{font-size:23px}.hero h2 span{font-size:30px}}
 </style>
 </head>
 <body>
@@ -298,6 +275,8 @@ button{font-family:inherit}
 <script>
 let balance = 2450;
 let completed = 0;
+const SUPABASE_URL = 'https://duswlvoedmupeylgecpr.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_9GKMe9LF7mMmw3lSnjLfnQ_xone8xWN';
 function showPage(id){
  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
  document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));
@@ -335,49 +314,53 @@ function shareInvite(){
   alert('Open your browser share menu to share ZENVORA.');
  }
 }
-/* TELEGRAM IDENTITY VERIFICATION */
+/* Telegram WebApp identity verification */
 async function verifyTelegram(){
  const status=document.getElementById('telegramStatus');
  const tg=window.Telegram && window.Telegram.WebApp;
- if(!status) return;
- if(!tg || !tg.initData){
-  status.textContent='⚠️ Open this Mini App inside Telegram.';
+ if(!tg){
+  status.textContent='⚠️ Telegram WebApp was not detected. Open this app inside Telegram.';
   return;
  }
  tg.ready();
  tg.expand();
+ const initData=tg.initData;
+ if(!initData){
+  status.textContent='⚠️ No Telegram login data found. Open the Mini App from the Telegram bot.';
+  return;
+ }
  try{
   status.textContent='⌛ Verifying Telegram identity...';
-  status.style.color='#ffd66b';
   const response=await fetch(
-   'https://duswlvoedmupeylgecpr.supabase.co/functions/v1/telegram-auth',
+   SUPABASE_URL + '/functions/v1/telegram-auth',
    {
     method:'POST',
     headers:{
      'Content-Type':'application/json',
-     'apikey':'sb_publishable_9GKMe9LF7mMmw3lSnjLfnQ_xone8xWN',
-     'Authorization':'Bearer sb_publishable_9GKMe9LF7mMmw3lSnjLfnQ_xone8xWN'
+     'apikey':SUPABASE_ANON_KEY
     },
-    body:JSON.stringify({initData:tg.initData})
+    body:JSON.stringify({initData:initData})
    }
   );
-  const result=await response.json().catch(()=>({}));
-  if(!response.ok){
-   throw new Error(result.error || result.message || ('Server error: '+response.status));
+  let result;
+  try{
+   result=await response.json();
+  }catch{
+   throw new Error('Supabase returned a non-JSON response. Check the Edge Function deployment.');
   }
-  if(!result.verified || !result.user){
-   throw new Error(result.error || 'Telegram identity was not verified.');
+  if(!response.ok || !result.verified){
+   throw new Error(result.error || ('Request failed: HTTP '+response.status));
   }
-  const name=result.user.first_name || 'Cosmic Explorer';
+  const user=result.user;
+  const name=user.first_name || 'Cosmic Explorer';
   document.getElementById('playerName').textContent=name;
   document.getElementById('profileName').textContent=name;
   status.textContent='✓ Telegram identity verified';
   status.style.color='#3dffb0';
-  console.log('Telegram identity verified:',result.user);
  }catch(error){
-  console.error('Telegram verification error:',error);
+  console.error('Telegram verification:',error);
   status.textContent='⚠️ '+error.message;
-  status.style.color='#ff7777';
+  status.style.color='#ff8b8b';
  }
 }
 verifyTelegram();
